@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+
+; Registry key to add a context menu option for video conversion
+[HKEY_CLASSES_ROOT\*\shell\ConvertVideo]
+"MUIVerb"="Convert video"
+"SubCommands"=""
+
+; Subkey for the custom video conversion option
+[HKEY_CLASSES_ROOT\*\shell\ConvertVideo\shell\VideoToH264QSVdefault]
+@="Video: Convert to H264 using Intel QSV, Q27, MP4 container"
+
+; Command to execute BAT
+[HKEY_CLASSES_ROOT\*\shell\ConvertVideo\shell\VideoToH264QSVdefault\command]
+@="C:\\Programs\\VideoContextMenu\\convert-video.bat \"%1\""

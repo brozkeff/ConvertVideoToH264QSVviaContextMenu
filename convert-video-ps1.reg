@@ -1,0 +1,17 @@
+Windows Registry Editor Version 5.00
+
+; Registry key to add a context menu option for video conversion
+[HKEY_CLASSES_ROOT\*\shell\ConvertVideo]
+"MUIVerb"="Convert video"
+"SubCommands"=""
+
+; Subkey for the custom video conversion option
+[HKEY_CLASSES_ROOT\*\shell\ConvertVideo\shell\VideoToH264QSV]
+@="Video: Convert with Custom Settings"
+
+; Command to execute PowerShell 7 script
+[HKEY_CLASSES_ROOT\*\shell\ConvertVideo\shell\VideoToH264QSV\command]
+@="pwsh.exe -ExecutionPolicy Bypass -File \"C:\\Programs\\VideoContextMenu\\convert-video.ps1\" \"%1\""
+
+; to try also regular powershell if PS7 is not available replace the above line with
+; @="cmd /c \"if exist \"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" (\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -ExecutionPolicy Bypass -File \"C:\\Programs\\VideoContextMenu\\convert-video.ps1\" \"%1\") else (powershell.exe -ExecutionPolicy Bypass -File \"C:\\Programs\\VideoContextMenu\\convert-video.ps1\" \"%1\")\""
