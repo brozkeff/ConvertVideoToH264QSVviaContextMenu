@@ -18,7 +18,7 @@ You should now have the video stabilization and converting shortcuts for all fil
 
 Edit the BAT file or PS1 file locally to best fit your needs or add more shortcuts to your liking by adding more BAT files (don't forget `.reg` corresponding changes).
 
-# Where to find output files
+## Where to find output files
 
 Conversion: in the same folder with `.mp4` extension. If such file already exists then `-h264` suffix is added to the output file name.
 
