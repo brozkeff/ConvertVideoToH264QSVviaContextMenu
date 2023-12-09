@@ -55,7 +55,7 @@ $comboBoxSpeed.Items.Add('fast')  # Default
 $comboBoxSpeed.Items.Add('medium')
 $comboBoxSpeed.Items.Add('slow')
 # Add other options as needed
-$comboBoxSpeed.SelectedIndex = 1 # Default is veryfast
+$comboBoxSpeed.SelectedIndex = 1 # Default is fast
 $form.Controls.Add($comboBoxSpeed)
 
 $form.Topmost = $true
