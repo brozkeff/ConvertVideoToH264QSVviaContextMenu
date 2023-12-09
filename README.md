@@ -6,6 +6,14 @@ Convert video to H264 using Intel QSV and ffmpeg with a single Windows Explorer 
 
 Inspired by <https://github.com/kachurovskiy/VideoContextMenu> but heavily modified to use QSV and also selectable options in PowerShell (with the help of ChatGPT).
 
+Context menu after adding both .reg files to Windows registry:
+
+<img src="https://raw.githubusercontent.com/brozkeff/ConvertVideoToH264QSVviaContextMenu/master/img/screenshot-context-menu.png">
+
+Selectable parameters when running the Powershell script. Defaults are MP4 container, Quality 29 and fast speed. That provides reasonably small files and cca 4x realtime compression speed for FullHD H264 source videos on Skylake gen i5 CPU. Modify as required.
+
+<img src="https://raw.githubusercontent.com/brozkeff/ConvertVideoToH264QSVviaContextMenu/master/img/screenshot-pwsh-dialog-parameters.png">
+
 ## Installation
 
 1. Make sure you have ffmpeg installed and added to PATH, so that typing `ffmpeg` into the Command Line works. You must have ffmpeg with QSV encoding support and Intel GPU that supports H264 HW encoding (Sandy Bridge and newer).
